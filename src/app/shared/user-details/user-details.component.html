@@ -1,6 +1,8 @@
-<div class="crop" [style.color]="userColor ? userColor: 'white'" [style.background]="userBg ? userBg:'blue'">
+<!-- <div class="crop" [style.color]="userColor ? userColor: 'white'" [style.background]="userBg ? userBg:'blue'">
   {{firstChar}}
-</div>
+</div> -->
+
+<first-char [name]="userFirstName" [userBg]="'blue'" [userColor]="'white'" (notify)="showGroupName($event)"></first-char>
 
 <div class="about">
   <div class="name">{{userFirstName}}

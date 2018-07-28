@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Cookie } from '../../../../node_modules/ng2-cookies/ng2-cookies';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'user-details',
@@ -15,7 +16,7 @@ export class UserDetailsComponent implements OnInit {
 
   public firstChar: string;
 
-  constructor() { }
+  constructor(public toastr: ToastrService) { }
 
   ngOnInit() {
   
@@ -23,4 +24,8 @@ export class UserDetailsComponent implements OnInit {
 
   }
 
+  public showGroupName = (name: string) => {
+
+    this.toastr.success("You are in group " + name);
+  }//end showGroupName
 }

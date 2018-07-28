@@ -65,4 +65,8 @@ export class ResetPasswordComponent implements OnInit {
       return false;
     }
   }//end matchPassword
+
+  public goToSignUp() {
+    this.router.navigate(['/signup']);
+  }//end goToSignUp
 }

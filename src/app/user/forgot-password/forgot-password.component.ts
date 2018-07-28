@@ -45,4 +45,8 @@ export class ForgotPasswordComponent implements OnInit {
 
   }//end of sendResetLink 
 
+  public goToSignUp() {
+    this.router.navigate(['/signup']);
+  }//end goToSignUp
+
 }
